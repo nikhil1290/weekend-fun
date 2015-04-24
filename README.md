@@ -16,7 +16,7 @@
 	   "name" : "Nikhil",
 	   "number" : xxx-xxx-xxxx,
 	    "address" : "Indianapolis",
-		"POC" : "Indiana University",
+	"company" : "Indiana University",
          "title" : "Test Engineer"
 	}
 ]
