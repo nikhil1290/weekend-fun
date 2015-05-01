@@ -1,6 +1,6 @@
 # 2015
 
-from sqlalchemy import Column, ForeignKey, Integer,Float, String,UniqueConstraint
+from sqlalchemy import Column, ForeignKey, Integer,Float,String,UniqueConstraint,Date
 from sqlalchemy.ext.declarative import declarative_base
 
 
@@ -36,7 +36,7 @@ class Weekend(Base):
     __tablename__ = "weekend"
     id = Column(Integer, primary_key=True)
     week_of = Column(Date, nullable=False)
-    place = Coulmn(String, nullable=False)
+    place = Column(String, nullable=False)
 
     def as_dict(self):
         res = {c.name: getattr(self, c.name) for c in self.__table__.columns}
@@ -97,6 +97,3 @@ class Expenses(Base):
         self.expense_type = expense_type
         self.amount = amount
         self.date = date
-
-
-    
