@@ -101,7 +101,7 @@ _Only applicable when ```profile_id```is specified._
 ```
 ### GET
  
-Returns single resource when ```id``` is specified. Returns list of all ```participant_ids``` when ```weekend_id``` is specified.Returns ```true``` or ```False``` if both ```weekend_id``` or ```participant_id``` are specified.
+Returns single resource when ```id``` is specified. Returns list of all ```participant_ids``` when ```weekend_id``` is specified.    
 
 ### POST
 Creates and returns a new resource when ```weekend_id``` and ```profile_id``` are specified.
