@@ -4,6 +4,7 @@ from sqlalchemy import Column, ForeignKey, Integer,Float,String,UniqueConstraint
 from sqlalchemy.ext.declarative import declarative_base
 
 
+
 Base = declarative_base()
 
 class Profile(Base):
@@ -43,11 +44,11 @@ class Weekend(Base):
         return res
 
     def __repr__(self):
-        s = "<Weekend(id='{0}', week_of'{1}', place='{2})'>"
+        s = "<Weekend(id='{0}', week_of='{1}', place='{2})'>"
         return s.format(self.id, self.week_of, self.place)
 
-    def __init__(self):
-        self.week_of = week_of
+    def __init__(self, week_of, place):
+        self.week_of = str(week_of)
         self.place = place
 
 
