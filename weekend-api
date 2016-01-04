@@ -1,0 +1,13 @@
+#!/usr/bin/env python2.7
+#
+
+import argparse
+import server
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("database", help="Base sqlalchemy uri of database.", type=str)
+    arguments = parser.parse_args()
+
+    app = server.get_application(arguments)
+    app.run(port=5000)
